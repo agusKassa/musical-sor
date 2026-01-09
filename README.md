@@ -1,4 +1,4 @@
-# MusicalXor - Landing Page
+# Musical Sor - Landing Page
 
 Landing page 100% frontend para tienda de música y clases de guitarra, construida con Next.js 15, TypeScript y Tailwind CSS.
 
