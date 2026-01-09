@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Brand Colors - Naranja Musical Sor */
+    --color-primary: 18 95% 55%;         /* Naranja vibrante del toldo - marca principal */
+    --color-primary-light: 18 95% 65%;
+    --color-primary-dark: 18 95% 45%;
+
+    /* Secondary/Accent Colors - Azul */
+    --color-secondary: 220 70% 50%;      /* Azul - acento */
+    --color-secondary-light: 220 70% 60%;
+    --color-secondary-dark: 220 70% 40%;
+
+    /* Neutral Colors - Dark Theme */
+    --color-background: 0 0% 10%;        /* Negro suave (no daña los ojos) */
+    --color-foreground: 0 0% 98%;        /* Blanco para texto */
+    --color-muted: 0 0% 15%;             /* Gris oscuro para secciones */
+    --color-muted-foreground: 0 0% 70%;  /* Gris claro para texto secundario */
+
+    /* Border & Divider */
+    --color-border: 0 0% 20%;            /* Bordes sutiles */
+
+    /* Card & Surface */
+    --color-card: 0 0% 14%;              /* Cards ligeramente más claras que el fondo */
+    --color-card-foreground: 0 0% 98%;   /* Texto blanco en cards */
+
+    /* Success/Error/Warning */
+    --color-success: 142 76% 45%;
+    --color-error: 0 84% 60%;
+    --color-warning: 38 92% 50%;
+
+    /* Shadows - Más sutiles para tema oscuro */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-title {
+    @apply text-6xl mb-4 font-pacifico bg-gradient-section bg-clip-text text-transparent;
+  }
+}
