@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen bg-background overflow-hidden">
+    <section className="relative min-h-screen bg-background overflow-hidden scroll-snap-section">
       {/* Fondo móvil - solo visible en pantallas pequeñas */}
       <div className="absolute inset-0 z-0 md:hidden bg-gradient-to-br from-secondary to-primary">
         <Image

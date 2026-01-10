@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export function Store() {
   return (
-    <section id="tienda" className="py-20 px-4 bg-muted relative overflow-hidden">
+    <section id="tienda" className="py-20 px-4 bg-muted relative overflow-hidden scroll-snap-section min-h-screen md:min-h-0">
       {/* Mobile background - solo visible en pantallas pequeñas */}
       <div className="absolute inset-0 z-0 md:hidden">
         <Image

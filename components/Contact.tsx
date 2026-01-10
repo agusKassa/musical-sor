@@ -21,7 +21,7 @@ export function Contact() {
   const address = env.contact.address.full;
 
   return (
-    <section id="contacto" className="py-20 px-4 bg-muted">
+    <section id="contacto" className="py-20 px-4 bg-muted scroll-snap-section min-h-screen md:min-h-0">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <FadeInWhenVisible>

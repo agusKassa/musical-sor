@@ -81,4 +81,28 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  /* Scroll Snap - Solo móvil */
+  @media (max-width: 768px) {
+    .scroll-snap-container {
+      scroll-snap-type: y mandatory;
+      scroll-padding-top: 0;
+      overflow-y: scroll;
+      height: 100vh;
+      scroll-behavior: auto;
+    }
+
+    .scroll-snap-section {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      min-height: 100vh;
+    }
+  }
+
+  /* Respetar preferencia de movimiento reducido */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-snap-container {
+      scroll-snap-type: none !important;
+    }
+  }
 }

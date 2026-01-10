@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export function Classes() {
   return (
-    <section id="clases" className="py-20 px-4 bg-background relative overflow-hidden">
+    <section id="clases" className="py-20 px-4 bg-background relative overflow-hidden scroll-snap-section min-h-screen md:min-h-0">
       {/* Mobile background - solo visible en pantallas pequeñas */}
       <div className="absolute inset-0 z-0 md:hidden">
         <Image
