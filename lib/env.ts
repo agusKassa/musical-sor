@@ -94,63 +94,22 @@ export const env = {
   storeInfo: {
     products: process.env.NEXT_PUBLIC_STORE_PRODUCTS_INFO!,
   },
-  hours: {
-    monday: process.env.NEXT_PUBLIC_HOURS_MONDAY || 'Cerrado',
-    tuesday: process.env.NEXT_PUBLIC_HOURS_TUESDAY || 'Cerrado',
-    wednesday: process.env.NEXT_PUBLIC_HOURS_WEDNESDAY || 'Cerrado',
-    thursday: process.env.NEXT_PUBLIC_HOURS_THURSDAY || 'Cerrado',
-    friday: process.env.NEXT_PUBLIC_HOURS_FRIDAY || 'Cerrado',
-    saturday: process.env.NEXT_PUBLIC_HOURS_SATURDAY || 'Cerrado',
-    sunday: process.env.NEXT_PUBLIC_HOURS_SUNDAY || 'Cerrado',
-  },
 } as const;
 
-// Business hours parser
-export function getBusinessHours() {
-  return [
-    { day: 'Lun', hours: env.hours.monday },
-    { day: 'Mar', hours: env.hours.tuesday },
-    { day: 'Mié', hours: env.hours.wednesday },
-    { day: 'Jue', hours: env.hours.thursday },
-    { day: 'Vie', hours: env.hours.friday },
-    { day: 'Sáb', hours: env.hours.saturday },
-    { day: 'Dom', hours: env.hours.sunday },
-  ];
-}
-
-// Helper function to format hours (replace comma with " y de ")
-function formatHours(hours: string): string {
-  return hours.replace(/,/g, ' y de ');
-}
-
-// Simplified business hours (groups weekdays together)
+// Horarios estáticos de la tienda
 export function getSimplifiedBusinessHours() {
-  const hours = getBusinessHours();
-
-  // Obtener horarios de lunes a viernes
-  const weekdayHours = hours.slice(0, 5); // Lun-Vie
-  const saturdayHours = hours[5]; // Sáb
-  const sundayHours = hours[6]; // Dom
-
-  // Verificar si L-V tienen el mismo horario
-  const allWeekdaysSame = weekdayHours.every(
-    day => day.hours === weekdayHours[0].hours
-  );
-
   return [
     {
       day: 'Lunes a Viernes',
-      hours: allWeekdaysSame
-        ? formatHours(weekdayHours[0].hours)
-        : 'Horarios variables (consultar)',
+      hours: '10:00 a 13:00 y de 16:00 a 20:00',
     },
     {
       day: 'Sábados',
-      hours: formatHours(saturdayHours.hours),
+      hours: '10:00 a 13:00',
     },
     {
       day: 'Domingos',
-      hours: formatHours(sundayHours.hours),
+      hours: 'Cerrado',
     },
   ];
 }

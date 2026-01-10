@@ -63,5 +63,22 @@
 
   .section-title {
     @apply text-6xl mb-4 font-pacifico bg-gradient-section bg-clip-text text-transparent;
+    line-height: 1.5;
+    padding: 1rem 0;
+    display: inline-block;
+  }
+
+  .text-gradient-primary {
+    background-image: linear-gradient(to right, hsl(var(--color-primary)), hsl(var(--color-primary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-secondary {
+    background-image: linear-gradient(to right, hsl(var(--color-secondary)), hsl(var(--color-secondary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

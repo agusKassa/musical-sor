@@ -1,21 +1,19 @@
 'use client';
 
 import { env } from '@/lib/env';
-import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
-import { ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function Hero() {
   return (
     <section className="relative min-h-screen bg-background overflow-hidden">
       {/* Fondo móvil - solo visible en pantallas pequeñas */}
-      <div className="absolute inset-0 z-0 md:hidden">
+      <div className="absolute inset-0 z-0 md:hidden bg-gradient-to-br from-secondary to-primary">
         <Image
           src="/images/store.jpg"
           alt=""
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-60 mix-blend-overlay blur-sm"
           priority
         />
       </div>
@@ -29,25 +27,23 @@ export function Hero() {
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           className="relative z-10 flex flex-col justify-center px-4 py-20 md:px-8 lg:px-12"
         >
-          <div className="text-center md:text-left text-white max-w-2xl mx-auto md:mx-0">
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-6 text-balance font-pacifico bg-gradient-section bg-clip-text text-transparent">
-              {env.store.name}
+          <div className="text-left text-white max-w-2xl md:mx-0">
+            <h1 className="text-8xl md:text-8xl lg:text-9xl font-bold mb-4 font-pacifico py-10 pr-4 md:px-4" style={{ lineHeight: '1.5' }}>
+              <span className="md:hidden inline-block">
+                <span className="text-gradient-primary">Mus</span>
+                <span className="text-gradient-secondary inline-block pr-2">ical</span>
+                <span className="text-gradient-primary"> Sor</span>
+              </span>
+              <span className="hidden md:inline bg-gradient-section bg-clip-text text-transparent">
+                {env.store.name}
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-balance">
+            <p className="text-2xl md:text-2xl mb-6 text-balance">
               {env.store.tagline}
             </p>
-            <p className="text-lg mb-10">
+            <p className="hidden md:block text-lg mb-10">
               {env.store.description}
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button size="lg" variant="primary" asChild>
-                <a href="#tienda">Nuestra Tienda</a>
-              </Button>
-              <Button size="lg" variant="secondary" asChild>
-                <a href="#clases">Clases de Guitarra</a>
-              </Button>
-            </div>
           </div>
         </motion.div>
 
@@ -67,16 +63,6 @@ export function Hero() {
           />
         </motion.div>
       </div>
-
-      {/* Indicador de scroll */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10"
-      >
-        <ChevronDown className="w-8 h-8 text-white" />
-      </motion.div>
     </section>
   );
 }

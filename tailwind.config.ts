@@ -13,6 +13,7 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-section': 'linear-gradient(to right, hsl(var(--color-primary)) 0%, hsl(var(--color-primary)) 40%, hsl(var(--color-secondary)) 60%, hsl(var(--color-secondary)) 100%)',
+        'gradient-section-mobile': 'linear-gradient(to right, hsl(var(--color-primary)) 0%, hsl(var(--color-primary)) 50%, hsl(var(--color-secondary)) 50%, hsl(var(--color-secondary)) 100%)',
       },
       colors: {
         primary: {

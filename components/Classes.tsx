@@ -13,7 +13,7 @@ export function Classes() {
           src="/images/CLASES.jpeg"
           alt=""
           fill
-          className="object-cover opacity-30"
+          className="object-cover object-[30%_center] opacity-30 blur-sm"
         />
       </div>
 
@@ -51,7 +51,7 @@ export function Classes() {
                 src="/images/CLASES.jpeg"
                 alt="Clases de guitarra"
                 fill
-                className="object-cover object-[20%_center]"
+                className="object-cover object-[30%_center]"
               />
             </div>
           </FadeInWhenVisible>

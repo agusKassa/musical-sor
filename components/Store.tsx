@@ -13,7 +13,7 @@ export function Store() {
           src="/images/guitarra.jpg"
           alt=""
           fill
-          className="object-cover opacity-30"
+          className="object-cover object-[75%_center] opacity-30 blur-sm"
         />
       </div>
 
