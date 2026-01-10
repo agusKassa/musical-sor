@@ -27,14 +27,14 @@ export function Hero() {
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           className="relative z-10 flex flex-col justify-center px-4 py-20 md:px-8 lg:px-12"
         >
-          <div className="text-left text-white max-w-2xl md:mx-0">
-            <h1 className="text-8xl md:text-8xl lg:text-9xl font-bold mb-4 font-pacifico py-10 pr-4 md:px-4" style={{ lineHeight: '1.5' }}>
+          <div className="text-left text-white max-w-2xl md:mx-0 pr-4">
+            <h1 className="text-8xl md:text-8xl lg:text-9xl font-bold mb-4 font-pacifico py-10 pr-8 md:pr-16 lg:pr-20" style={{ lineHeight: '1.5' }}>
               <span className="md:hidden inline-block">
                 <span className="text-gradient-primary">Mus</span>
                 <span className="text-gradient-secondary inline-block pr-2">ical</span>
                 <span className="text-gradient-primary"> Sor</span>
               </span>
-              <span className="hidden md:inline bg-gradient-section bg-clip-text text-transparent">
+              <span className="hidden md:inline-block bg-gradient-section bg-clip-text text-transparent pr-4">
                 {env.store.name}
               </span>
             </h1>
