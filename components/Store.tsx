@@ -19,7 +19,7 @@ export function Store() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <FadeInWhenVisible>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="section-title">Nuestra Tienda</h2>
           </div>
         </FadeInWhenVisible>

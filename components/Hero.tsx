@@ -8,12 +8,12 @@ export function Hero() {
   return (
     <section className="relative min-h-screen bg-background overflow-hidden scroll-snap-section">
       {/* Fondo móvil - solo visible en pantallas pequeñas */}
-      <div className="absolute inset-0 z-0 md:hidden bg-gradient-to-br from-secondary to-primary">
+      <div className="absolute inset-0 z-0 md:hidden">
         <Image
           src="/images/store.jpg"
           alt=""
           fill
-          className="object-cover opacity-60 mix-blend-overlay blur-sm"
+          className="object-cover opacity-60 mix-blend-overlay blur-sm grayscale brightness-110 contrast-75"
           priority
         />
       </div>
@@ -28,7 +28,7 @@ export function Hero() {
           className="relative z-10 flex flex-col justify-center px-4 py-20 md:px-8 lg:px-12"
         >
           <div className="text-left text-white max-w-2xl md:mx-0 pr-4">
-            <h1 className="text-8xl md:text-8xl lg:text-9xl font-bold mb-4 font-pacifico py-10 pr-8 md:pr-16 lg:pr-20" style={{ lineHeight: '1.5' }}>
+            <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold mb-4 font-pacifico py-10 pr-8 md:pr-16 lg:pr-20" style={{ lineHeight: '1.5' }}>
               <span className="md:hidden inline-block">
                 <span className="text-gradient-primary">Mus</span>
                 <span className="text-gradient-secondary inline-block pr-2">ical</span>
@@ -58,7 +58,7 @@ export function Hero() {
             src="/images/store.jpg"
             alt="Instrumentos musicales"
             fill
-            className="object-cover opacity-60 mix-blend-overlay"
+            className="object-cover opacity-60 mix-blend-overlay grayscale brightness-110 contrast-75"
             priority
           />
         </motion.div>
