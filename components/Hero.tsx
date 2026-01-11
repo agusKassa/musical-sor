@@ -38,16 +38,27 @@ export function Hero() {
                 {env.store.name}
               </span>
             </h1>
-            <div className="text-2xl mb-6 md:hidden">
-              <p className="mb-4">Venta de instrumentos musicales.</p>
-              <p className="mb-4">Reparación y calibración de equipos.</p>
-              <p>Clases de guitarra.</p>
+            <div className="md:hidden">
+              <p className="text-3xl font-semibold mb-4" style={{
+                textShadow: '0 2px 12px rgba(0, 0, 0, 0.6), 0 4px 20px rgba(0, 0, 0, 0.4)'
+              }}>
+                Tu música empieza acá
+              </p>
+              <p className="text-xl opacity-90" style={{
+                textShadow: '0 1px 8px rgba(0, 0, 0, 0.5), 0 2px 12px rgba(0, 0, 0, 0.3)'
+              }}>
+                Instrumentos, reparación y clases para que toques lo que amás
+              </p>
             </div>
-            <p className="hidden md:block text-2xl mb-6 text-balance">
-              {env.store.tagline}
+            <p className="hidden md:block text-3xl font-semibold mb-4" style={{
+              textShadow: '0 2px 12px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3)'
+            }}>
+              Tu música empieza acá
             </p>
-            <p className="hidden md:block text-lg mb-10">
-              {env.store.description}
+            <p className="hidden md:block text-xl mb-10 opacity-90" style={{
+              textShadow: '0 1px 8px rgba(0, 0, 0, 0.4), 0 2px 10px rgba(0, 0, 0, 0.2)'
+            }}>
+              Instrumentos de calidad, reparación profesional y clases personalizadas
             </p>
           </div>
         </motion.div>
