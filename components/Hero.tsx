@@ -38,7 +38,12 @@ export function Hero() {
                 {env.store.name}
               </span>
             </h1>
-            <p className="text-2xl md:text-2xl mb-6 text-balance">
+            <div className="text-2xl mb-6 md:hidden">
+              <p className="mb-4">Venta de instrumentos musicales.</p>
+              <p className="mb-4">Reparación y calibración de equipos.</p>
+              <p>Clases de guitarra.</p>
+            </div>
+            <p className="hidden md:block text-2xl mb-6 text-balance">
               {env.store.tagline}
             </p>
             <p className="hidden md:block text-lg mb-10">
